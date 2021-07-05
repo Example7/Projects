@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.avatar-container {
+  position: absolute;
+}
+
+.avatar-container::before,
+.avatar-container::after {
+  --scale: 0;
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transform-origin: bottom center;
+  transition: transform 150ms;
+}
+
+.avatar-container::before {
+  content: attr(data-tooltip);
+  width: max-content;
+  max-width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.avatar-container:hover::before,
+.avatar-container:hover::after {
+  --scale: 1;
+}
+
+.avatar-container::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: black;
+}

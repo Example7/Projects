@@ -1,0 +1,93 @@
+:root {
+  --font-type: "Bona Nova", serif;
+  --font-type-input: "Raleway", sans-serif;
+  --border-radius: 0.3em;
+  --normal-font-size: 1.5rem;
+}
+* {
+  box-sizing: border-box;
+  font-family: var(--font-type);
+  font-weight: 400;
+}
+body {
+  margin: 0;
+}
+
+.full-screen-container {
+  background-image: url("./img/background-image.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: hsla(201, 100%, 6%, 0.6);
+  padding: 3em 2em;
+  min-width: 400px;
+  width: 50%;
+  max-width: 600px;
+}
+
+.login-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.input-group label {
+  color: white;
+  font-size: var(--normal-font-size);
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.input-group input {
+  font-family: var(--font-type-input);
+  font-size: var(--normal-font-size);
+  font-weight: 200;
+  padding: 0.25em 0.5em;
+  background: hsla(201, 100%, 91%, 0.3);
+  border: 1px solid hsl(201, 100%, 6%);
+  border-radius: var(--border-radius);
+  outline: none;
+  color: white;
+}
+
+.input-group input:focus {
+  border: 1px solid hsl(201, 100%, 50%);
+}
+
+.login-button {
+  padding: 0.5em 2em;
+  width: 100%;
+  background: hsla(201, 100%, 50%, 0.1);
+  border: 1px solid hsl(201, 100%, 50%);
+  border-radius: var(--border-radius);
+  outline: none;
+  font-size: var(--normal-font-size);
+  color: white;
+  margin-top: 1.5em;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: hsla(201, 100%, 50%, 0.3);
+}
+
+.login-button:focus {
+  background-color: hsla(201, 100%, 50%, 0.5);
+}

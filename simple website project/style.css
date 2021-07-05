@@ -1,0 +1,323 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --titleFont: "Merriweather", serif;
+  --normalFont: "Noto Serif", serif;
+  --dark-8: #2e323f;
+  --dark-6: #3b4050;
+  --dark-3: #d5d7db;
+  --light: #fff;
+  --darkYellow: #a59678;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--normalFont);
+}
+
+img {
+  width: 100%;
+  max-height: 350px;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin: 0 0 0.5em 0;
+  font-family: var(--titleFont);
+  font-size: 1.3rem;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: var(--light);
+}
+
+ul li {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
+ul li:hover,
+ul li:focus,
+.button:hover,
+.button:focus,
+i:hover,
+i:focus {
+  opacity: 0.6;
+}
+
+nav {
+  background-color: var(--dark-8);
+}
+
+i {
+  color: var(--light);
+  align-self: center;
+  font-size: 2rem !important;
+  cursor: pointer;
+}
+
+main {
+  background-color: var(--dark-6);
+}
+
+.diffColor {
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--darkYellow);
+}
+
+main p {
+  color: white;
+}
+
+main a {
+  text-decoration: none;
+  padding: 0.5em 2em;
+  border-radius: 20em;
+  font-weight: bold;
+  background-color: var(--darkYellow);
+  color: white;
+}
+
+main {
+  padding: 1em 0;
+}
+
+article {
+  padding: 1em 0;
+}
+
+article h3,
+article h2 {
+  color: var(--darkYellow);
+}
+
+.first--article {
+  background-color: var(--dark-3);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+aside div {
+  background-color: var(--dark-6);
+  color: var(--light);
+  padding: 2em 0;
+}
+
+aside h3 {
+  color: var(--light);
+}
+
+aside div p {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--dark-6);
+}
+
+footer h2 {
+  color: var(--light);
+  font-size: 1.5rem;
+  padding-top: 1em;
+}
+
+footer h4 {
+  color: var(--darkYellow);
+}
+
+footer {
+  color: var(--dark-3);
+  padding: 0;
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-transform: uppercase;
+}
+
+@media (min-width: 700px) {
+  .flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .row ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .column {
+    flex-direction: row;
+  }
+
+  .footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .column div {
+    padding: 0.5em 0;
+  }
+
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .row {
+    justify-content: flex-end;
+    gap: 2em;
+  }
+
+  .flexbox__text {
+    align-self: flex-end;
+  }
+
+  .flexbox-big {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+  }
+  .column {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .button {
+    justify-content: flex-start;
+  }
+
+  .footer-row {
+    gap: 3em;
+  }
+
+  article p {
+    text-align: center;
+  }
+
+  .second--article h2,
+  .second--article p {
+    text-align: start;
+  }
+
+  footer ul {
+    align-items: flex-start;
+  }
+
+  footer h4 {
+    text-align: start;
+  }
+  .align-left {
+    text-align: left;
+  }
+  img {
+    max-width: 500px;
+  }
+
+  main {
+    padding: 5em 0;
+  }
+
+  article {
+    padding: 3em 0;
+  }
+
+  body {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  footer h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+  i {
+    font-size: 4rem !important;
+  }
+}
