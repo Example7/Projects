@@ -675,6 +675,14 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  .header-background {
+    background: #404eed;
+  }
+
+  .visibleContainer {
+    display: none;
+  }
+
   .header_big {
     display: block;
   }
